@@ -1,0 +1,12 @@
+*.py?
+*~
+*.sw?
+\#*#
+.DS_Store
+._*
+/*.egg-info
+/docs/_build
+.coverage
+htmlcov
+venv
+db.sqlite3
