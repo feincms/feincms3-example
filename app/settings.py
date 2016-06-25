@@ -140,3 +140,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'format_tags': 'h1;h2;h3;p;pre',
+        'toolbar_Custom': [
+            ['Format', 'RemoveFormat'],
+            ['Bold', 'Italic', 'Strike', '-',
+             'NumberedList', 'BulletedList', '-',
+             'Anchor', 'Link', 'Unlink', '-',
+             'Source'],
+        ],
+    },
+}
+
+# Settings for feincms3.plugins.richtext.RichText
+CKEDITOR_CONFIGS['richtext-plugin'] = CKEDITOR_CONFIGS['default']
