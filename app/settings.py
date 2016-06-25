@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Libraries
+    'feincms3',
+    'mptt',
+    'content_editor',
+
+    # Libraries for content-editor plugins
+    'ckeditor',
+    'versatileimagefield',
+
+    # Our app
+    'app.pages',
+    'app.articles',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -105,6 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+LANGUAGES = [
+    ('en', _('English')),
+    ('de', _('German')),
+]
 
 TIME_ZONE = 'UTC'
 
