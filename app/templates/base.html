@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load i18n feincms3_pages %}
+<html lang="{{ request.LANGUAGE_CODE }}">
+<head>
+  <title>{% block title %}feincms3{% endblock %}</title>
+  <style>
+
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  padding: 0; margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background: #e2e2e2;
+  box-sizing: border-box;
+}
+.wrap {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 50, .3);
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 1px solid #aaa;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+header>* {
+  margin: 0;
+}
+header a,
+.main-nav a,
+.footer-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+}
+.nav a {
+  display: block;
+  padding: 1rem 2rem;
+  background: lightblue;
+  color: inherit;
+  flex: 1 0 auto;
+  text-align: center;
+  margin-right: 1px;
+  transition: .3s;
+}
+.nav a:hover,
+.nav a.active {
+  background: lightgreen;
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.columns {
+  display: flex;
+}
+.columns .main {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+.columns .sidebar {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+a.article { display: block; }
+
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1><a href="/{{ request.LANGUAGE_CODE }}/">feincms3</a></h1>
+    <nav class="language-nav">
+      <a href="/en/">english</a>
+      <a href="/de/">deutsch</a>
+    </nav>
+  </header>
+
+  {% menu "main" level=1 tree_id=page.tree_id as nav %}
+  <nav class="nav main-nav">
+    {% for p in nav %}
+    {% is_descendant_of page p include_self=True as active %}
+    <a {% if active %}class="active"{% endif %}
+      href="{{ p.get_absolute_url }}">{{ p }}</a>
+    {% endfor %}
+  </nav>
+
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+
+  {% menu "footer" level=1 tree_id=page.tree_id as nav %}
+  <nav class="nav footer-nav">
+    {% for p in nav %}
+    {% is_descendant_of page p include_self=True as active %}
+    <a {% if active %}class="active"{% endif %}
+      href="{{ p.get_absolute_url }}">{{ p }}</a>
+    {% endfor %}
+  </nav>
+
+</div>
+</body>
+</html>
