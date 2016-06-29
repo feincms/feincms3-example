@@ -7,7 +7,8 @@ Clone this repository::
     git clone https://github.com/matthiask/feincms3-example/
     cd feincms3-example
 
-Setup a virtualenv::
+Setup a virtualenv (Python 3 is recommended for new projects, but you
+can also use Python 2.7)::
 
     virtualenv -p python3 venv
     venv/bin/pip install -r requirements.txt
