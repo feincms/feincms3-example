@@ -4,6 +4,7 @@
   "pk": 1,
   "fields": {
     "application": "",
+    "app_instance_namespace": "",
     "menu": "main",
     "template_key": "standard",
     "language_code": "en",
@@ -24,6 +25,7 @@
   "pk": 2,
   "fields": {
     "application": "",
+    "app_instance_namespace": "",
     "menu": "main",
     "template_key": "standard",
     "language_code": "de",
@@ -44,6 +46,7 @@
   "pk": 3,
   "fields": {
     "application": "publications",
+    "app_instance_namespace": "publications",
     "menu": "main",
     "template_key": "standard",
     "language_code": "en",
@@ -64,6 +67,7 @@
   "pk": 4,
   "fields": {
     "application": "blog",
+    "app_instance_namespace": "blog",
     "menu": "main",
     "template_key": "standard",
     "language_code": "en",
@@ -84,6 +88,7 @@
   "pk": 5,
   "fields": {
     "application": "",
+    "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "standard",
     "language_code": "en",
@@ -104,6 +109,7 @@
   "pk": 6,
   "fields": {
     "application": "",
+    "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "with-sidebar",
     "language_code": "en",
@@ -124,6 +130,7 @@
   "pk": 7,
   "fields": {
     "application": "publications",
+    "app_instance_namespace": "publications",
     "menu": "main",
     "template_key": "standard",
     "language_code": "de",
@@ -144,6 +151,7 @@
   "pk": 8,
   "fields": {
     "application": "blog",
+    "app_instance_namespace": "blog",
     "menu": "main",
     "template_key": "standard",
     "language_code": "de",
@@ -164,6 +172,7 @@
   "pk": 9,
   "fields": {
     "application": "",
+    "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "standard",
     "language_code": "de",
@@ -184,6 +193,7 @@
   "pk": 10,
   "fields": {
     "application": "",
+    "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "with-sidebar",
     "language_code": "de",
