@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='page',
             name='app_instance_namespace',
-            field=models.CharField(default=None, editable=False, max_length=100, verbose_name='app instance namespace'),
+            field=models.CharField(default='', editable=False, max_length=100, verbose_name='app instance namespace'),
             preserve_default=False,
         ),
         migrations.AlterField(
