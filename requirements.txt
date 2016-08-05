@@ -1,3 +1,9 @@
-Django<1.10
-feincms3==0.6.0
+Django
+django-ckeditor
+django-content-editor
+django-mptt-nomagic
+django-versatileimagefield
+feincms3
+feincms-cleanse
+requests
 pytz
