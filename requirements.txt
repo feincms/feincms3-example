@@ -3,7 +3,7 @@ django-ckeditor
 django-content-editor
 django-mptt-nomagic
 django-versatileimagefield
-feincms3
+feincms3<0.10
 feincms-cleanse
 requests
 pytz
