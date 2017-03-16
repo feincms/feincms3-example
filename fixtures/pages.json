@@ -13,11 +13,7 @@
     "title": "Home",
     "slug": "home",
     "path": "/en/",
-    "static_path": true,
-    "lft": 1,
-    "rght": 10,
-    "tree_id": 1,
-    "level": 0
+    "static_path": true
   }
 },
 {
@@ -34,11 +30,7 @@
     "title": "Start",
     "slug": "start",
     "path": "/de/",
-    "static_path": true,
-    "lft": 1,
-    "rght": 10,
-    "tree_id": 2,
-    "level": 0
+    "static_path": true
   }
 },
 {
@@ -55,11 +47,7 @@
     "title": "Publications",
     "slug": "publications",
     "path": "/en/publications/",
-    "static_path": false,
-    "lft": 2,
-    "rght": 3,
-    "tree_id": 1,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -76,11 +64,7 @@
     "title": "Blog",
     "slug": "blog",
     "path": "/en/blog/",
-    "static_path": false,
-    "lft": 4,
-    "rght": 5,
-    "tree_id": 1,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -97,11 +81,7 @@
     "title": "About us",
     "slug": "about-us",
     "path": "/en/about-us/",
-    "static_path": false,
-    "lft": 6,
-    "rght": 7,
-    "tree_id": 1,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -118,11 +98,7 @@
     "title": "Imprint",
     "slug": "imprint",
     "path": "/en/imprint/",
-    "static_path": false,
-    "lft": 8,
-    "rght": 9,
-    "tree_id": 1,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -139,11 +115,7 @@
     "title": "Ver\u00f6ffentlichungen",
     "slug": "veroffentlichungen",
     "path": "/de/veroffentlichungen/",
-    "static_path": false,
-    "lft": 2,
-    "rght": 3,
-    "tree_id": 2,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -160,11 +132,7 @@
     "title": "Blog",
     "slug": "blog",
     "path": "/de/blog/",
-    "static_path": false,
-    "lft": 4,
-    "rght": 5,
-    "tree_id": 2,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -181,11 +149,7 @@
     "title": "\u00dcber uns",
     "slug": "ueber-uns",
     "path": "/de/ueber-uns/",
-    "static_path": false,
-    "lft": 6,
-    "rght": 7,
-    "tree_id": 2,
-    "level": 1
+    "static_path": false
   }
 },
 {
@@ -202,11 +166,7 @@
     "title": "Impressum",
     "slug": "impressum",
     "path": "/de/impressum/",
-    "static_path": false,
-    "lft": 8,
-    "rght": 9,
-    "tree_id": 2,
-    "level": 1
+    "static_path": false
   }
 },
 {

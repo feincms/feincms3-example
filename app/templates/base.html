@@ -90,7 +90,7 @@ a.article { display: block; }
     </nav>
   </header>
 
-  {% menu "main" level=1 tree_id=page.tree_id as nav %}
+  {% menu "main" level=1 language_code=page.language_code as nav %}
   <nav class="nav main-nav">
     {% for p in nav %}
     {% is_descendant_of page p include_self=True as active %}
@@ -103,7 +103,7 @@ a.article { display: block; }
     {% block content %}{% endblock %}
   </div>
 
-  {% menu "footer" level=1 tree_id=page.tree_id as nav %}
+  {% menu "footer" level=1 language_code=page.language_code as nav %}
   <nav class="nav footer-nav">
     {% for p in nav %}
     {% is_descendant_of page p include_self=True as active %}

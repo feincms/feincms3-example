@@ -5,8 +5,7 @@ from django.utils.text import capfirst
 from django.utils.translation import ugettext_lazy as _
 
 from content_editor.admin import ContentEditor
-
-from mptt.admin import DraggableMPTTAdmin
+from feincms3.admin import TreeAdmin
 
 from feincms3 import plugins
 
@@ -14,9 +13,9 @@ from . import models
 
 
 @admin.register(models.Page)
-class PageAdmin(DraggableMPTTAdmin, ContentEditor):
+class PageAdmin(ContentEditor, TreeAdmin):
     list_display = [
-        'tree_actions', 'indented_title',
+        'indented_title', 'move_column',
         'is_active', 'menu',
         'language_code',
         'template_key',

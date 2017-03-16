@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.shortcuts import get_object_or_404, render
 from django.utils.html import format_html, mark_safe
 
-from content_editor.contents import contents_for_mptt_item
+from content_editor.contents import contents_for_item
 from content_editor.renderer import PluginRenderer
 
 from .models import Page, RichText, Image
@@ -30,7 +30,10 @@ def page_detail(request, path=None):
         path='/{}/'.format(path) if path else '/',
     )
     page.activate_language(request)
-    contents = contents_for_mptt_item(page, [RichText, Image])
+    contents = contents_for_item(
+        page,
+        [RichText, Image],
+        inherit_from=page.ancestors().reverse())
     return render(request, page.template.template_name, {
         'page': page,
         'content': {
