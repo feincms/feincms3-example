@@ -10,3 +10,4 @@
 htmlcov
 venv
 db.sqlite3
+/media
