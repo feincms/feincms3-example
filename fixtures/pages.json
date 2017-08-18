@@ -3,15 +3,16 @@
   "model": "pages.page",
   "pk": 1,
   "fields": {
+    "parent": null,
     "application": "",
     "app_instance_namespace": "",
     "menu": "main",
     "template_key": "standard",
     "language_code": "en",
-    "parent": null,
     "is_active": true,
     "title": "Home",
     "slug": "home",
+    "position": 1,
     "path": "/en/",
     "static_path": true
   }
@@ -20,15 +21,16 @@
   "model": "pages.page",
   "pk": 2,
   "fields": {
+    "parent": null,
     "application": "",
     "app_instance_namespace": "",
     "menu": "main",
     "template_key": "standard",
     "language_code": "de",
-    "parent": null,
     "is_active": true,
     "title": "Start",
     "slug": "start",
+    "position": 2,
     "path": "/de/",
     "static_path": true
   }
@@ -37,15 +39,16 @@
   "model": "pages.page",
   "pk": 3,
   "fields": {
+    "parent": 1,
     "application": "publications",
     "app_instance_namespace": "publications",
     "menu": "main",
     "template_key": "standard",
     "language_code": "en",
-    "parent": 1,
     "is_active": true,
     "title": "Publications",
     "slug": "publications",
+    "position": 3,
     "path": "/en/publications/",
     "static_path": false
   }
@@ -54,15 +57,16 @@
   "model": "pages.page",
   "pk": 4,
   "fields": {
+    "parent": 1,
     "application": "blog",
     "app_instance_namespace": "blog",
     "menu": "main",
     "template_key": "standard",
     "language_code": "en",
-    "parent": 1,
     "is_active": true,
     "title": "Blog",
     "slug": "blog",
+    "position": 4,
     "path": "/en/blog/",
     "static_path": false
   }
@@ -71,15 +75,16 @@
   "model": "pages.page",
   "pk": 5,
   "fields": {
+    "parent": 1,
     "application": "",
     "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "standard",
     "language_code": "en",
-    "parent": 1,
     "is_active": true,
     "title": "About us",
     "slug": "about-us",
+    "position": 5,
     "path": "/en/about-us/",
     "static_path": false
   }
@@ -88,15 +93,16 @@
   "model": "pages.page",
   "pk": 6,
   "fields": {
+    "parent": 1,
     "application": "",
     "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "with-sidebar",
     "language_code": "en",
-    "parent": 1,
     "is_active": true,
     "title": "Imprint",
     "slug": "imprint",
+    "position": 6,
     "path": "/en/imprint/",
     "static_path": false
   }
@@ -105,15 +111,16 @@
   "model": "pages.page",
   "pk": 7,
   "fields": {
+    "parent": 2,
     "application": "publications",
     "app_instance_namespace": "publications",
     "menu": "main",
     "template_key": "standard",
     "language_code": "de",
-    "parent": 2,
     "is_active": true,
     "title": "Ver\u00f6ffentlichungen",
     "slug": "veroffentlichungen",
+    "position": 7,
     "path": "/de/veroffentlichungen/",
     "static_path": false
   }
@@ -122,15 +129,16 @@
   "model": "pages.page",
   "pk": 8,
   "fields": {
+    "parent": 2,
     "application": "blog",
     "app_instance_namespace": "blog",
     "menu": "main",
     "template_key": "standard",
     "language_code": "de",
-    "parent": 2,
     "is_active": true,
     "title": "Blog",
     "slug": "blog",
+    "position": 8,
     "path": "/de/blog/",
     "static_path": false
   }
@@ -139,15 +147,16 @@
   "model": "pages.page",
   "pk": 9,
   "fields": {
+    "parent": 2,
     "application": "",
     "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "standard",
     "language_code": "de",
-    "parent": 2,
     "is_active": true,
     "title": "\u00dcber uns",
     "slug": "ueber-uns",
+    "position": 9,
     "path": "/de/ueber-uns/",
     "static_path": false
   }
@@ -156,15 +165,16 @@
   "model": "pages.page",
   "pk": 10,
   "fields": {
+    "parent": 2,
     "application": "",
     "app_instance_namespace": "",
     "menu": "footer",
     "template_key": "with-sidebar",
     "language_code": "de",
-    "parent": 2,
     "is_active": true,
     "title": "Impressum",
     "slug": "impressum",
+    "position": 10,
     "path": "/de/impressum/",
     "static_path": false
   }
