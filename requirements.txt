@@ -1,4 +1,4 @@
-Django<1.11  # django-versatileimagefield is not there yet.
+Django
 feincms3[all]
 psycopg2
 pytz
