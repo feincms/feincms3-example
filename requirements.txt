@@ -2,3 +2,4 @@ Django
 feincms3[all]
 psycopg2
 pytz
+django-versatileimagefield
