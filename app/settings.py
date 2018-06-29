@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
     # Libraries for content-editor plugins
     'ckeditor',
-    'versatileimagefield',
+    'imagefield',
 
     # Our app
     'app',
@@ -53,14 +53,13 @@ INSTALLED_APPS = [
     'app.articles',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'feincms3.apps.AppsMiddleware',

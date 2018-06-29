@@ -6,7 +6,7 @@ import django.core.validators
 from django.db import migrations, models
 import django.db.models.deletion
 import feincms3.cleanse
-import versatileimagefield.fields
+import imagefield.fields
 
 
 class Migration(migrations.Migration):
@@ -21,10 +21,10 @@ class Migration(migrations.Migration):
             name='Image',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', versatileimagefield.fields.VersatileImageField(height_field='height', upload_to='images/%Y/%m', verbose_name='image', width_field='width')),
+                ('image', imagefield.fields.ImageField(height_field='height', upload_to='images/%Y/%m', verbose_name='image', width_field='width')),
                 ('width', models.PositiveIntegerField(blank=True, editable=False, null=True, verbose_name='image width')),
                 ('height', models.PositiveIntegerField(blank=True, editable=False, null=True, verbose_name='image height')),
-                ('ppoi', versatileimagefield.fields.PPOIField(default='0.5x0.5', editable=False, max_length=20, verbose_name='primary point of interest')),
+                ('ppoi', imagefield.fields.PPOIField(default='0.5x0.5', max_length=20, verbose_name='primary point of interest')),
                 ('region', models.CharField(max_length=255)),
                 ('ordering', models.IntegerField(default=0)),
                 ('caption', models.CharField(blank=True, max_length=200, verbose_name='caption')),

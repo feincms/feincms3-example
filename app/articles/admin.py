@@ -2,13 +2,10 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from feincms3.plugins.versatileimage import AlwaysChangedModelForm
-
 from . import models
 
 
 class ImageInline(admin.TabularInline):
-    form = AlwaysChangedModelForm
     model = models.Image
     extra = 0
 
