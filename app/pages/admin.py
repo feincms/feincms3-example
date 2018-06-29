@@ -5,9 +5,9 @@ from django.utils.text import capfirst
 from django.utils.translation import ugettext_lazy as _
 
 from content_editor.admin import ContentEditor
-from feincms3.admin import TreeAdmin
-
 from feincms3 import plugins
+from feincms3.admin import TreeAdmin
+from js_asset import JS
 
 from . import models
 
@@ -70,9 +70,11 @@ class PageAdmin(ContentEditor, TreeAdmin):
     ]
 
     class Media:
-        css = {'all': (
-            'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',  # noqa
-        )}
         js = (
+            JS('https://use.fontawesome.com/releases/v5.0.10/js/all.js', {
+                'async': 'async',
+                'integrity': 'sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+',  # noqa
+                'crossorigin': 'anonymous',
+            }, static=False),
             'app/plugin_buttons.js',
         )
