@@ -97,7 +97,7 @@ a.article { display: block; }
   {% menus as menus %}
   <nav class="nav main-nav">
     {% for p in menus.main %}
-    <a {% if p.id in page.cte_path %}class="active"{% endif %}
+    <a {% if p.id in page.tree_path %}class="active"{% endif %}
       href="{{ p.get_absolute_url }}">{{ p }}</a>
     {% endfor %}
   </nav>
@@ -108,7 +108,7 @@ a.article { display: block; }
 
   <nav class="nav footer-nav">
     {% for p in menus.footer %}
-    <a {% if p.id in page.cte_path %}class="active"{% endif %}
+    <a {% if p.id in page.tree_path %}class="active"{% endif %}
       href="{{ p.get_absolute_url }}">{{ p }}</a>
     {% endfor %}
   </nav>

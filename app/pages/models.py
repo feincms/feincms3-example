@@ -4,17 +4,11 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from content_editor.models import Region, Template, create_plugin_base
-from cte_forest.models import CTENodeManager
 
 from feincms3 import plugins
 from feincms3.apps import AppsMixin
 from feincms3.mixins import TemplateMixin, MenuMixin, LanguageMixin
 from feincms3.pages import AbstractPage
-
-
-class PageManager(CTENodeManager):
-    def active(self):
-        return self.filter(is_active=True)
 
 
 class Page(
@@ -69,8 +63,6 @@ class Page(
             'urlconf': 'app.articles.urls',
         }),
     ]
-
-    objects = PageManager()
 
 
 PagePlugin = create_plugin_base(Page)
