@@ -5,8 +5,8 @@ from django.utils.text import capfirst
 from django.utils.translation import ugettext_lazy as _
 
 from content_editor.admin import ContentEditor
-from feincms3 import plugins
 from feincms3.admin import TreeAdmin
+from feincms3.plugins import image, richtext
 from js_asset import JS
 
 from . import models
@@ -65,8 +65,8 @@ class PageAdmin(ContentEditor, TreeAdmin):
     ]
 
     inlines = [
-        plugins.RichTextInline.create(model=models.RichText),
-        plugins.ImageInline.create(model=models.Image),
+        richtext.RichTextInline.create(model=models.RichText),
+        image.ImageInline.create(model=models.Image),
     ]
 
     class Media:

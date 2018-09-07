@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from feincms3.apps import reverse_app
 from feincms3.cleanse import CleansedRichTextField
-from feincms3 import plugins
+from feincms3.plugins import image
 
 
 class ArticleManager(models.Manager):
@@ -101,7 +101,7 @@ class Article(models.Model):
         )
 
 
-class Image(plugins.Image):
+class Image(image.Image):
     article = models.ForeignKey(
         Article,
         on_delete=models.CASCADE,

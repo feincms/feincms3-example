@@ -5,10 +5,10 @@ from django.utils.translation import ugettext_lazy as _
 
 from content_editor.models import Region, Template, create_plugin_base
 
-from feincms3 import plugins
 from feincms3.apps import AppsMixin
 from feincms3.mixins import TemplateMixin, MenuMixin, LanguageMixin
 from feincms3.pages import AbstractPage
+from feincms3.plugins import image, richtext
 
 
 class Page(
@@ -68,11 +68,11 @@ class Page(
 PagePlugin = create_plugin_base(Page)
 
 
-class RichText(plugins.RichText, PagePlugin):
+class RichText(richtext.RichText, PagePlugin):
     pass
 
 
-class Image(plugins.Image, PagePlugin):
+class Image(image.Image, PagePlugin):
     caption = models.CharField(
         _('caption'),
         max_length=200,
