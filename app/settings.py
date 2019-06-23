@@ -62,7 +62,7 @@ MIDDLEWARE = MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'feincms3.apps.AppsMiddleware',
+    'feincms3.apps.apps_middleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
