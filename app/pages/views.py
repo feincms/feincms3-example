@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import get_object_or_404, render
+from feincms3.regions import Regions
 
 from .models import Page
 from .renderer import renderer
@@ -14,6 +15,6 @@ def page_detail(request, path=None):
     page.activate_language(request)
     return render(request, page.template.template_name, {
         'page': page,
-        'regions': renderer.regions(
-            page, inherit_from=page.ancestors().reverse()),
+        'regions': Regions.from_item(
+            page, renderer=renderer, inherit_from=page.ancestors().reverse()),
     })
