@@ -1,23 +1,21 @@
-from __future__ import unicode_literals
-
-from django.conf.urls import url
 from django.http import HttpResponseRedirect
+from django.urls import re_path
 
 from app.pages import views
 
 
 app_name = 'pages'
 urlpatterns = [
-    url(
+    re_path(
         r'^$',
         lambda request: HttpResponseRedirect('/%s/' % request.LANGUAGE_CODE),
     ),
-    url(
+    re_path(
         r'^(?P<path>[-\w/]+)/$',
         views.page_detail,
         name='page',
     ),
-    url(
+    re_path(
         r'^$',
         views.page_detail,
         name='root',

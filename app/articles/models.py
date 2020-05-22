@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
-from django.utils.encoding import python_2_unicode_compatible
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from feincms3.apps import reverse_app
 from feincms3.cleanse import CleansedRichTextField
@@ -21,7 +20,6 @@ class ArticleManager(models.Manager):
         )
 
 
-@python_2_unicode_compatible
 class Article(models.Model):
     """
     The articles models. We're using the ``CleansedRichTextField`` field

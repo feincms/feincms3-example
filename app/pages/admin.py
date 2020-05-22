@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 from django.utils.text import capfirst
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from content_editor.admin import ContentEditor
 from feincms3.admin import TreeAdmin
