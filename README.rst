@@ -13,10 +13,8 @@ Setup a virtualenv::
     . venv/bin/activate
     pip install -r requirements.txt
 
-Create the database and maybe adapt the connection parameters
-in ``app/settings.py``::
-
-    createdb feincms3_example
+Maybe adapt the database connection parameters in ``app/settings.py``,
+if you don’t want to use SQLite.
 
 Run migrations and create a superuser::
 
