@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-
 from feincms3.apps import reverse_app
 from feincms3.cleanse import CleansedRichTextField
 from feincms3.plugins import image
@@ -32,18 +31,17 @@ class Article(models.Model):
     # NOTE! All categories require a matching entry in
     # app.pages.models.Page.APPLICATIONS.
     CATEGORIES = (
-        ('blog', _('blog')),
-        ('publications', _('publications')),
+        ("blog", _("blog")),
+        ("publications", _("publications")),
     )
 
-    is_active = models.BooleanField(_('is active'), default=False)
-    title = models.CharField(_('title'), max_length=200)
-    slug = models.SlugField(_('slug'), unique_for_year='publication_date')
-    publication_date = models.DateTimeField(
-        _('publication date'), default=timezone.now)
-    body = CleansedRichTextField(_('body'))
+    is_active = models.BooleanField(_("is active"), default=False)
+    title = models.CharField(_("title"), max_length=200)
+    slug = models.SlugField(_("slug"), unique_for_year="publication_date")
+    publication_date = models.DateTimeField(_("publication date"), default=timezone.now)
+    body = CleansedRichTextField(_("body"))
     category = models.CharField(
-        _('category'),
+        _("category"),
         max_length=20,
         db_index=True,
         choices=CATEGORIES,
@@ -52,10 +50,10 @@ class Article(models.Model):
     objects = ArticleManager()
 
     class Meta:
-        get_latest_by = 'publication_date'
-        ordering = ['-publication_date']
-        verbose_name = _('article')
-        verbose_name_plural = _('articles')
+        get_latest_by = "publication_date"
+        ordering = ["-publication_date"]
+        verbose_name = _("article")
+        verbose_name_plural = _("articles")
 
     def __str__(self):
         return self.title
@@ -90,11 +88,11 @@ class Article(models.Model):
         """
 
         return reverse_app(
-            (self.category, 'articles'),
-            'article-detail',
+            (self.category, "articles"),
+            "article-detail",
             kwargs={
-                'year': self.publication_date.year,
-                'slug': self.slug,
+                "year": self.publication_date.year,
+                "slug": self.slug,
             },
         )
 
@@ -103,11 +101,11 @@ class Image(image.Image):
     article = models.ForeignKey(
         Article,
         on_delete=models.CASCADE,
-        verbose_name=_('article'),
-        related_name='images',
+        verbose_name=_("article"),
+        related_name="images",
     )
     caption = models.CharField(
-        _('caption'),
+        _("caption"),
         max_length=200,
         blank=True,
     )

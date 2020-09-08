@@ -1,9 +1,8 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import get_object_or_404
-
 from feincms3.apps import page_for_app_request
-from feincms3.shortcuts import render_list, render_detail
+from feincms3.shortcuts import render_detail, render_list
 
 from .models import Article
 
@@ -14,10 +13,12 @@ def article_list(request):
     return render_list(
         request,
         # Only show articles for the current app.
-        Article.objects.published().filter(
+        Article.objects.published()
+        .filter(
             category=page.application,
-        ).prefetch_related('images'),
-        {'page': page},
+        )
+        .prefetch_related("images"),
+        {"page": page},
         paginate_by=10,
     )
 
@@ -37,5 +38,5 @@ def article_detail(request, year, slug):
             publication_date__year=year,
             slug=slug,
         ),
-        {'page': page},
+        {"page": page},
     )

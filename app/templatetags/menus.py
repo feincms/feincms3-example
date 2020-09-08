@@ -6,7 +6,6 @@ from django.utils.translation import get_language
 
 from app.pages.models import Page
 
-
 register = template.Library()
 
 
@@ -16,9 +15,9 @@ def menus():
     pages = Page.objects.filter(
         Q(is_active=True),
         Q(language_code=get_language()),
-        ~Q(menu=''),
+        ~Q(menu=""),
     ).extra(
-        where=['tree_depth BETWEEN 1 AND 2'],
+        where=["tree_depth BETWEEN 1 AND 2"],
     )
     for page in pages:
         menus[page.menu].append(page)

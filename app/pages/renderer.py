@@ -1,9 +1,7 @@
 from django.utils.html import mark_safe
-
 from feincms3.renderer import TemplatePluginRenderer
 
 from app.pages import models
-
 
 renderer = TemplatePluginRenderer()
 renderer.register_string_renderer(
@@ -12,5 +10,5 @@ renderer.register_string_renderer(
 )
 renderer.register_template_renderer(
     models.Image,
-    'plugins/image.html',
+    "plugins/image.html",
 )

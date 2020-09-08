@@ -6,5 +6,5 @@ from django.utils.translation import gettext_lazy as _
 
 
 class ArticlesConfig(AppConfig):
-    name = 'app.articles'
-    verbose_name = capfirst(_('articles'))
+    name = "app.articles"
+    verbose_name = capfirst(_("articles"))

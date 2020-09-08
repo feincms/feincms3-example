@@ -12,27 +12,29 @@ class ImageInline(admin.TabularInline):
 
 @admin.register(models.Article)
 class ArticleAdmin(admin.ModelAdmin):
-    date_hierarchy = 'publication_date'
+    date_hierarchy = "publication_date"
     inlines = [ImageInline]
-    list_display = [
-        'title', 'is_active', 'publication_date', 'category']
-    list_editable = ['is_active']
-    list_filter = ['is_active', 'category']
+    list_display = ["title", "is_active", "publication_date", "category"]
+    list_editable = ["is_active"]
+    list_filter = ["is_active", "category"]
     prepopulated_fields = {
-        'slug': ('title',),
+        "slug": ("title",),
     }
     radio_fields = {
-        'category': admin.HORIZONTAL,
+        "category": admin.HORIZONTAL,
     }
 
     fieldsets = [
-        (None, {
-            'fields': (
-                ('is_active',),
-                ('title', 'slug'),
-                'publication_date',
-                'category',
-                'body',
-            )
-        }),
+        (
+            None,
+            {
+                "fields": (
+                    ("is_active",),
+                    ("title", "slug"),
+                    "publication_date",
+                    "category",
+                    "body",
+                )
+            },
+        ),
     ]
