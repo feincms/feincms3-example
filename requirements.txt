@@ -1,2 +1,2 @@
 Django
-feincms3[all]
+feincms3[all]>=0.90b1
