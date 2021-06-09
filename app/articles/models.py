@@ -1,10 +1,8 @@
-from __future__ import unicode_literals
-
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-from feincms3.apps import reverse_app
-from feincms3.cleanse import CleansedRichTextField
+from feincms3.applications import reverse_app
+from feincms3.inline_ckeditor import InlineCKEditorField
 from feincms3.plugins import image
 
 
@@ -21,11 +19,10 @@ class ArticleManager(models.Manager):
 
 class Article(models.Model):
     """
-    The articles models. We're using the ``CleansedRichTextField`` field
-    which provides us with django-ckeditor_'s editing interface and
-    feincms-cleanse_'s HTML post-processing and cleansing. This code snippet
-    also contains the trickiest bit of this whole project, ``Article``'s
-    ``get_absolute_url`` implementation.
+    The articles models. We're using the ``InlineCKEditorField`` field
+    which provides us with an inline CKEditor instance and HTML-sanitizer's
+    post-processing. This code snippet also contains the trickiest bit of this
+    whole project, ``Article``'s ``get_absolute_url`` implementation.
     """
 
     # NOTE! All categories require a matching entry in
@@ -39,7 +36,7 @@ class Article(models.Model):
     title = models.CharField(_("title"), max_length=200)
     slug = models.SlugField(_("slug"), unique_for_year="publication_date")
     publication_date = models.DateTimeField(_("publication date"), default=timezone.now)
-    body = CleansedRichTextField(_("body"))
+    body = InlineCKEditorField(_("body"))
     category = models.CharField(
         _("category"),
         max_length=20,
@@ -62,7 +59,7 @@ class Article(models.Model):
         """
         This is the trickiest bit of this whole project.
         reverse_app is a simple wrapper around
-        feincms3.apps.reverse_any, which is exactly the same as
+        feincms3.applications.reverse_any, which is exactly the same as
         django.core.urlresolvers.reverse with the small difference
         that it accepts a list of viewnames and returns the first
         result where no NoReverseMatch exception is raised.

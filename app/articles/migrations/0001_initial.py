@@ -2,7 +2,6 @@
 
 import django.db.models.deletion
 import django.utils.timezone
-import feincms3.cleanse
 import imagefield.fields
 from django.db import migrations, models
 
@@ -44,7 +43,7 @@ class Migration(migrations.Migration):
                         verbose_name="publication date",
                     ),
                 ),
-                ("body", feincms3.cleanse.CleansedRichTextField(verbose_name="body")),
+                ("body", models.TextField(verbose_name="body")),
                 (
                     "category",
                     models.CharField(

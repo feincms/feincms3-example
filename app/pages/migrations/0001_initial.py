@@ -2,7 +2,6 @@
 
 import django.core.validators
 import django.db.models.deletion
-import feincms3.cleanse
 import imagefield.fields
 from django.db import migrations, models
 
@@ -138,7 +137,7 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("text", feincms3.cleanse.CleansedRichTextField(verbose_name="text")),
+                ("text", models.TextField(verbose_name="text")),
                 ("region", models.CharField(max_length=255)),
                 ("ordering", models.IntegerField(default=0)),
                 (

@@ -1,9 +1,7 @@
-from __future__ import unicode_literals
-
 from content_editor.models import Region, create_plugin_base
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from feincms3.apps import ApplicationType, PageTypeMixin, TemplateType
+from feincms3.applications import ApplicationType, PageTypeMixin, TemplateType
 from feincms3.mixins import LanguageMixin, MenuMixin
 from feincms3.pages import AbstractPage
 from feincms3.plugins import image, richtext
@@ -14,7 +12,7 @@ class Page(
     PageTypeMixin,  # For adding the articles app to pages through the CMS.
     MenuMixin,  # We have a main and a footer navigation (meta).
     LanguageMixin,  # We're building a multilingual CMS. (Also,
-    # feincms3.apps depends on LanguageMixin
+    # feincms3.applications depends on LanguageMixin
     # currently.)
 ):
     TYPES = [

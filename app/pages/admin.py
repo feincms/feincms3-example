@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from content_editor.admin import ContentEditor
 from django.contrib import admin
 from django.utils.text import capfirst

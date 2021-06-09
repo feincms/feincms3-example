@@ -1,7 +1,5 @@
-from __future__ import unicode_literals
-
 from django.shortcuts import get_object_or_404
-from feincms3.apps import page_for_app_request
+from feincms3.applications import page_for_app_request
 from feincms3.shortcuts import render_detail, render_list
 
 from .models import Article

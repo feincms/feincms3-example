@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "feincms3",
     "content_editor",
     # Libraries for content-editor plugins
-    "ckeditor",
     "imagefield",
     # Our app
     "app",
@@ -60,7 +59,7 @@ MIDDLEWARE = MIDDLEWARE_CLASSES = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "feincms3.apps.apps_middleware",
+    "feincms3.applications.apps_middleware",
 ]
 
 ROOT_URLCONF = "app.urls"
@@ -93,6 +92,7 @@ DATABASES = {
         "NAME": "db.sqlite3",
     }
 }
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
 # Password validation
@@ -138,30 +138,3 @@ USE_TZ = True
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-CKEDITOR_CONFIGS = {
-    "default": {
-        "toolbar": "Custom",
-        "format_tags": "h1;h2;h3;p;pre",
-        "toolbar_Custom": [
-            ["Format", "RemoveFormat"],
-            [
-                "Bold",
-                "Italic",
-                "Strike",
-                "-",
-                "NumberedList",
-                "BulletedList",
-                "-",
-                "Anchor",
-                "Link",
-                "Unlink",
-                "-",
-                "Source",
-            ],
-        ],
-    },
-}
-
-# Settings for feincms3.plugins.richtext.RichText
-CKEDITOR_CONFIGS["richtext-plugin"] = CKEDITOR_CONFIGS["default"]
