@@ -4,7 +4,6 @@ from django.utils.text import capfirst
 from django.utils.translation import gettext_lazy as _
 from feincms3.admin import TreeAdmin
 from feincms3.plugins import image, richtext
-from js_asset import JS
 
 from . import models
 
@@ -73,17 +72,3 @@ class PageAdmin(ContentEditor, TreeAdmin):
         richtext.RichTextInline.create(model=models.RichText),
         image.ImageInline.create(model=models.Image),
     ]
-
-    class Media:
-        js = (
-            JS(
-                "https://use.fontawesome.com/releases/v5.0.10/js/all.js",
-                {
-                    "async": "async",
-                    "integrity": "sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+",  # noqa
-                    "crossorigin": "anonymous",
-                },
-                static=False,
-            ),
-            "app/plugin_buttons.js",
-        )

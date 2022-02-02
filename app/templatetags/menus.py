@@ -6,6 +6,7 @@ from django.utils.translation import get_language
 
 from app.pages.models import Page
 
+
 register = template.Library()
 
 

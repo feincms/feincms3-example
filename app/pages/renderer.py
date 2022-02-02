@@ -1,14 +1,15 @@
 from django.utils.html import mark_safe
-from feincms3.renderer import TemplatePluginRenderer
+from feincms3.renderer import RegionRenderer, template_renderer
 
 from app.pages import models
 
-renderer = TemplatePluginRenderer()
-renderer.register_string_renderer(
+
+renderer = RegionRenderer()
+renderer.register(
     models.RichText,
-    lambda plugin: mark_safe(plugin.text),
+    lambda plugin, context: mark_safe(plugin.text),
 )
-renderer.register_template_renderer(
+renderer.register(
     models.Image,
-    "plugins/image.html",
+    template_renderer("plugins/image.html"),
 )

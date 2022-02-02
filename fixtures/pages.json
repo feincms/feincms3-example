@@ -1,222 +1,222 @@
 [
-{
-  "model": "pages.page",
-  "pk": 1,
-  "fields": {
-    "parent": null,
-    "app_namespace": "",
-    "menu": "main",
-    "page_type": "standard",
-    "language_code": "en",
-    "is_active": true,
-    "title": "Home",
-    "slug": "home",
-    "position": 1,
-    "path": "/en/",
-    "static_path": true
+  {
+    "model": "pages.page",
+    "pk": 1,
+    "fields": {
+      "parent": null,
+      "app_namespace": "",
+      "menu": "main",
+      "page_type": "standard",
+      "language_code": "en",
+      "is_active": true,
+      "title": "Home",
+      "slug": "home",
+      "position": 1,
+      "path": "/en/",
+      "static_path": true
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 2,
+    "fields": {
+      "parent": null,
+      "app_namespace": "",
+      "menu": "main",
+      "page_type": "standard",
+      "language_code": "de",
+      "is_active": true,
+      "title": "Start",
+      "slug": "start",
+      "position": 2,
+      "path": "/de/",
+      "static_path": true
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 3,
+    "fields": {
+      "parent": 1,
+      "app_namespace": "publications",
+      "menu": "main",
+      "page_type": "publications",
+      "language_code": "en",
+      "is_active": true,
+      "title": "Publications",
+      "slug": "publications",
+      "position": 3,
+      "path": "/en/publications/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 4,
+    "fields": {
+      "parent": 1,
+      "app_namespace": "blog",
+      "menu": "main",
+      "page_type": "blog",
+      "language_code": "en",
+      "is_active": true,
+      "title": "Blog",
+      "slug": "blog",
+      "position": 4,
+      "path": "/en/blog/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 5,
+    "fields": {
+      "parent": 1,
+      "app_namespace": "",
+      "menu": "footer",
+      "page_type": "standard",
+      "language_code": "en",
+      "is_active": true,
+      "title": "About us",
+      "slug": "about-us",
+      "position": 5,
+      "path": "/en/about-us/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 6,
+    "fields": {
+      "parent": 1,
+      "app_namespace": "",
+      "menu": "footer",
+      "page_type": "with-sidebar",
+      "language_code": "en",
+      "is_active": true,
+      "title": "Imprint",
+      "slug": "imprint",
+      "position": 6,
+      "path": "/en/imprint/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 7,
+    "fields": {
+      "parent": 2,
+      "app_namespace": "publications",
+      "menu": "main",
+      "page_type": "publications",
+      "language_code": "de",
+      "is_active": true,
+      "title": "Ver\u00f6ffentlichungen",
+      "slug": "veroffentlichungen",
+      "position": 7,
+      "path": "/de/veroffentlichungen/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 8,
+    "fields": {
+      "parent": 2,
+      "app_namespace": "blog",
+      "menu": "main",
+      "page_type": "blog",
+      "language_code": "de",
+      "is_active": true,
+      "title": "Blog",
+      "slug": "blog",
+      "position": 8,
+      "path": "/de/blog/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 9,
+    "fields": {
+      "parent": 2,
+      "app_namespace": "",
+      "menu": "footer",
+      "page_type": "standard",
+      "language_code": "de",
+      "is_active": true,
+      "title": "\u00dcber uns",
+      "slug": "ueber-uns",
+      "position": 9,
+      "path": "/de/ueber-uns/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.page",
+    "pk": 10,
+    "fields": {
+      "parent": 2,
+      "app_namespace": "",
+      "menu": "footer",
+      "page_type": "with-sidebar",
+      "language_code": "de",
+      "is_active": true,
+      "title": "Impressum",
+      "slug": "impressum",
+      "position": 10,
+      "path": "/de/impressum/",
+      "static_path": false
+    }
+  },
+  {
+    "model": "pages.richtext",
+    "pk": 1,
+    "fields": {
+      "text": "<p>Hello World!</p>",
+      "parent": 1,
+      "region": "main",
+      "ordering": 10
+    }
+  },
+  {
+    "model": "pages.richtext",
+    "pk": 2,
+    "fields": {
+      "text": "<p>Hallo Welt!</p>",
+      "parent": 2,
+      "region": "main",
+      "ordering": 10
+    }
+  },
+  {
+    "model": "pages.richtext",
+    "pk": 3,
+    "fields": {
+      "text": "<p>\u00dcber uns....</p>",
+      "parent": 9,
+      "region": "main",
+      "ordering": 10
+    }
+  },
+  {
+    "model": "pages.richtext",
+    "pk": 4,
+    "fields": {
+      "text": "<p>Rechte blabla.</p>",
+      "parent": 10,
+      "region": "main",
+      "ordering": 10
+    }
+  },
+  {
+    "model": "pages.richtext",
+    "pk": 5,
+    "fields": {
+      "text": "<p>Noch etwas Sidebar-Inhalt.</p>",
+      "parent": 10,
+      "region": "sidebar",
+      "ordering": 20
+    }
   }
-},
-{
-  "model": "pages.page",
-  "pk": 2,
-  "fields": {
-    "parent": null,
-    "app_namespace": "",
-    "menu": "main",
-    "page_type": "standard",
-    "language_code": "de",
-    "is_active": true,
-    "title": "Start",
-    "slug": "start",
-    "position": 2,
-    "path": "/de/",
-    "static_path": true
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 3,
-  "fields": {
-    "parent": 1,
-    "app_namespace": "publications",
-    "menu": "main",
-    "page_type": "publications",
-    "language_code": "en",
-    "is_active": true,
-    "title": "Publications",
-    "slug": "publications",
-    "position": 3,
-    "path": "/en/publications/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 4,
-  "fields": {
-    "parent": 1,
-    "app_namespace": "blog",
-    "menu": "main",
-    "page_type": "blog",
-    "language_code": "en",
-    "is_active": true,
-    "title": "Blog",
-    "slug": "blog",
-    "position": 4,
-    "path": "/en/blog/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 5,
-  "fields": {
-    "parent": 1,
-    "app_namespace": "",
-    "menu": "footer",
-    "page_type": "standard",
-    "language_code": "en",
-    "is_active": true,
-    "title": "About us",
-    "slug": "about-us",
-    "position": 5,
-    "path": "/en/about-us/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 6,
-  "fields": {
-    "parent": 1,
-    "app_namespace": "",
-    "menu": "footer",
-    "page_type": "with-sidebar",
-    "language_code": "en",
-    "is_active": true,
-    "title": "Imprint",
-    "slug": "imprint",
-    "position": 6,
-    "path": "/en/imprint/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 7,
-  "fields": {
-    "parent": 2,
-    "app_namespace": "publications",
-    "menu": "main",
-    "page_type": "publications",
-    "language_code": "de",
-    "is_active": true,
-    "title": "Ver\u00f6ffentlichungen",
-    "slug": "veroffentlichungen",
-    "position": 7,
-    "path": "/de/veroffentlichungen/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 8,
-  "fields": {
-    "parent": 2,
-    "app_namespace": "blog",
-    "menu": "main",
-    "page_type": "blog",
-    "language_code": "de",
-    "is_active": true,
-    "title": "Blog",
-    "slug": "blog",
-    "position": 8,
-    "path": "/de/blog/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 9,
-  "fields": {
-    "parent": 2,
-    "app_namespace": "",
-    "menu": "footer",
-    "page_type": "standard",
-    "language_code": "de",
-    "is_active": true,
-    "title": "\u00dcber uns",
-    "slug": "ueber-uns",
-    "position": 9,
-    "path": "/de/ueber-uns/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.page",
-  "pk": 10,
-  "fields": {
-    "parent": 2,
-    "app_namespace": "",
-    "menu": "footer",
-    "page_type": "with-sidebar",
-    "language_code": "de",
-    "is_active": true,
-    "title": "Impressum",
-    "slug": "impressum",
-    "position": 10,
-    "path": "/de/impressum/",
-    "static_path": false
-  }
-},
-{
-  "model": "pages.richtext",
-  "pk": 1,
-  "fields": {
-    "text": "<p>Hello World!</p>",
-    "parent": 1,
-    "region": "main",
-    "ordering": 10
-  }
-},
-{
-  "model": "pages.richtext",
-  "pk": 2,
-  "fields": {
-    "text": "<p>Hallo Welt!</p>",
-    "parent": 2,
-    "region": "main",
-    "ordering": 10
-  }
-},
-{
-  "model": "pages.richtext",
-  "pk": 3,
-  "fields": {
-    "text": "<p>\u00dcber uns....</p>",
-    "parent": 9,
-    "region": "main",
-    "ordering": 10
-  }
-},
-{
-  "model": "pages.richtext",
-  "pk": 4,
-  "fields": {
-    "text": "<p>Rechte blabla.</p>",
-    "parent": 10,
-    "region": "main",
-    "ordering": 10
-  }
-},
-{
-  "model": "pages.richtext",
-  "pk": 5,
-  "fields": {
-    "text": "<p>Noch etwas Sidebar-Inhalt.</p>",
-    "parent": 10,
-    "region": "sidebar",
-    "ordering": 20
-  }
-}
 ]

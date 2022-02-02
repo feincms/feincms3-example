@@ -12,9 +12,7 @@ def article_list(request):
         request,
         # Only show articles for the current app.
         Article.objects.published()
-        .filter(
-            category=page.application,
-        )
+        .filter(category=page.page_type)
         .prefetch_related("images"),
         {"page": page},
         paginate_by=10,

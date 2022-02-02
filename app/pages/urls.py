@@ -3,6 +3,7 @@ from django.urls import re_path
 
 from app.pages import views
 
+
 app_name = "pages"
 urlpatterns = [
     re_path(
