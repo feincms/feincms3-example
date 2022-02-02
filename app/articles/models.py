@@ -26,7 +26,7 @@ class Article(models.Model):
     """
 
     # NOTE! All categories require a matching entry in
-    # app.pages.models.Page.APPLICATIONS.
+    # app.pages.models.Page.TYPES.
     CATEGORIES = (
         ("blog", _("blog")),
         ("publications", _("publications")),
