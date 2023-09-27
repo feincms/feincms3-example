@@ -1,4 +1,4 @@
-from django.urls import re_path
+from django.urls import path, re_path
 
 from app.articles import views
 
@@ -6,8 +6,8 @@ from app.articles import views
 app_name = "articles"
 ignore_app_name_mismatch = True  # It's expected
 urlpatterns = [
-    re_path(
-        r"^$",
+    path(
+        "",
         views.article_list,
         name="article-list",
     ),

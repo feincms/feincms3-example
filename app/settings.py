@@ -61,6 +61,7 @@ MIDDLEWARE = MIDDLEWARE_CLASSES = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "feincms3.applications.apps_middleware",
+    "app.pages.middleware.page_if_404_middleware",
 ]
 
 ROOT_URLCONF = "app.urls"

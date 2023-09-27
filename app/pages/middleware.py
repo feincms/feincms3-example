@@ -1,14 +1,11 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
+from feincms3.root.middleware import create_page_if_404_middleware
 
 from .models import Page
 from .renderer import renderer
 
 
-def page_detail(request, path=None):
-    page = get_object_or_404(
-        Page.objects.active(),
-        path=f"/{path}/" if path else "/",
-    )
+def handler(request, page):
     page.activate_language(request)
     return render(
         request,
@@ -22,3 +19,8 @@ def page_detail(request, path=None):
             ),
         },
     )
+
+
+page_if_404_middleware = create_page_if_404_middleware(
+    queryset=lambda request: Page.objects.active(), handler=handler
+)
