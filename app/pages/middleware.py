@@ -22,5 +22,7 @@ def handler(request, page):
 
 
 page_if_404_middleware = create_page_if_404_middleware(
-    queryset=lambda request: Page.objects.active(), handler=handler, language_code_redirect=True
+    queryset=lambda request: Page.objects.active(),
+    handler=handler,
+    language_code_redirect=True,
 )
