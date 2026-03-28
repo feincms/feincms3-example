@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Libraries
     "feincms3",
+    "tree_queries",
     "content_editor",
     # Libraries for content-editor plugins
     "imagefield",
